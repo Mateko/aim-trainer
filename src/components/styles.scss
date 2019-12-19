@@ -23,8 +23,8 @@ $break-large: 1200px;
 @mixin button-hover {
   &:hover {
     background-color: $another-red;
-    color: $stronger-gray;
-    border-color: $main-red;
+    color: white;
+    border-color: white;
   }
 }
 
@@ -137,6 +137,35 @@ $break-large: 1200px;
     .settings__border {
       padding-top: 25px;
       box-shadow: 0 6px 3px -4px $main-red;
+    }
+  }
+
+  /* GAME -- GAME -- GAME -- GAME -- GAME -- GAME -- GAME */
+  .game__container {
+    position: relative;
+  }
+
+  .game__target {
+    height: 0px;
+    width: 0px;
+    background-color: $main-red;
+    border-radius: 50%;
+  }
+
+  .game__traget--display {
+    display: inline-block;
+    -webkit-animation-name: show-target;
+    -webkit-animation-duration: 4s;
+    animation-name: show-target;
+    animation-duration: 4s;
+    text-align: center;
+    position: absolute;
+  }
+
+  @keyframes show-target {
+    50% {
+      height: 28px;
+      width: 28px;
     }
   }
 }

@@ -39,7 +39,7 @@ class Home extends React.Component {
             <button
               type="button"
               className="settings__time"
-              value={20}
+              value={10}
               onClick={this.setTime.bind(this)}
             >
               10s
@@ -91,11 +91,19 @@ class Home extends React.Component {
             </button>
           </div>
           <span className="settings__border"></span>
-          <div className="settings__container">
-            <Link className="settings__buton" to="/game">
-              Start game
-            </Link>
-          </div>
+          {(gameDuration != null) & (gameDifficult != null) ? (
+            <div className="settings__container">
+              <Link
+                className="settings__buton"
+                to={{
+                  pathname: "/game",
+                  state: { gameDuration, gameDifficult }
+                }}
+              >
+                Start game
+              </Link>
+            </div>
+          ) : null}
         </section>
       </main>
     );
