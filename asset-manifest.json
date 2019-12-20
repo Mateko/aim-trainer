@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aim-trainer/static/css/main.335fc8d8.chunk.css",
+    "main.js": "/aim-trainer/static/js/main.4b759dec.chunk.js",
+    "main.js.map": "/aim-trainer/static/js/main.4b759dec.chunk.js.map",
+    "runtime-main.js": "/aim-trainer/static/js/runtime-main.e2249a18.js",
+    "runtime-main.js.map": "/aim-trainer/static/js/runtime-main.e2249a18.js.map",
+    "static/js/2.8c14f55f.chunk.js": "/aim-trainer/static/js/2.8c14f55f.chunk.js",
+    "static/js/2.8c14f55f.chunk.js.map": "/aim-trainer/static/js/2.8c14f55f.chunk.js.map",
+    "index.html": "/aim-trainer/index.html",
+    "precache-manifest.58d20ab23bc8e8d42f43275d210fef3a.js": "/aim-trainer/precache-manifest.58d20ab23bc8e8d42f43275d210fef3a.js",
+    "service-worker.js": "/aim-trainer/service-worker.js",
+    "static/css/main.335fc8d8.chunk.css.map": "/aim-trainer/static/css/main.335fc8d8.chunk.css.map",
+    "static/js/2.8c14f55f.chunk.js.LICENSE": "/aim-trainer/static/js/2.8c14f55f.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2249a18.js",
+    "static/js/2.8c14f55f.chunk.js",
+    "static/css/main.335fc8d8.chunk.css",
+    "static/js/main.4b759dec.chunk.js"
+  ]
+}
