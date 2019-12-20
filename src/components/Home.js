@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 import "./styles.scss";
 
 class Home extends React.Component {
@@ -25,12 +26,7 @@ class Home extends React.Component {
 
     return (
       <main className="page">
-        <header className="header">
-          <div className="header__logo">
-            <i className="material-icons header__icon">control_camera</i>
-            <p className="header__text">Aim trainer</p>
-          </div>
-        </header>
+        <Header />
         <section className="settings">
           <h4 className="settings__header">
             Time: {gameDuration ? gameDuration + " seconds" : null}

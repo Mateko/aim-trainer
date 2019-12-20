@@ -35,16 +35,13 @@ class Game extends React.Component {
     });
   };
 
-  timeEnd = () => {
+  checkTime = () => {
     const gameTime = this.props.location.state.gameDuration * 1000 + 3000;
 
     setTimeout(() => this.setState({ goToScoreBoard: true }), gameTime);
   };
 
-  showTargets = () => {
-    const { width, height } = this.state;
-    const { gameDuration, gameDifficult } = this.props.location.state;
-
+  showTargets = (width, height, gameDuration, gameDifficult) => {
     if (width !== 0 && height !== 0) {
       return (
         <ShowTargets
@@ -59,13 +56,25 @@ class Game extends React.Component {
   };
 
   render() {
+    const { width, height, score } = this.state;
+    const { gameDuration, gameDifficult } = this.props.location.state;
+
     if (this.state.goToScoreBoard) {
-      return <Redirect to="/result" />;
+      return (
+        <Redirect
+          to={{
+            pathname: "/result",
+            state: { gameDuration, gameDifficult, score }
+          }}
+        />
+      );
     }
-    this.timeEnd();
+
+    this.checkTime();
+
     return (
       <main className="page" ref={this.gameBoard}>
-        {this.showTargets()}
+        {this.showTargets(width, height, gameDuration, gameDifficult)}
       </main>
     );
   }

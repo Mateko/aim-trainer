@@ -28,6 +28,32 @@ $break-large: 1200px;
   }
 }
 
+@mixin block {
+  margin: 0 auto;
+  background-color: $stronger-gray;
+  width: 60%;
+  margin-top: 15vh;
+  min-height: 300px;
+  padding: 6px;
+  @include border-radius(10px, 10px, 10px, 10px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@mixin link-button {
+  margin-top: 20px;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+  padding: 7px;
+  font-family: $settings-font;
+  color: white;
+  @include border-radius(4px, 4px, 4px, 4px);
+  @include button-hover;
+}
+
 .page {
   height: 100vh;
   background-color: $main-grey;
@@ -62,16 +88,7 @@ $break-large: 1200px;
   /* SETTINGS -- SETTINGS -- SETTINGS -- SETTINGS -- SETTINGS -- SETTINGS -- SETTINGS */
 
   .settings {
-    margin: 0 auto;
-    background-color: $stronger-gray;
-    width: 60%;
-    margin-top: 15vh;
-    min-height: 300px;
-    padding: 6px;
-    @include border-radius(10px, 10px, 10px, 10px);
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    @include block;
 
     @media screen and (min-width: $break-large) {
       width: 20%;
@@ -122,16 +139,7 @@ $break-large: 1200px;
       }
 
       .settings__buton {
-        margin-top: 20px;
-        cursor: default;
-        text-decoration: none;
-        color: black;
-        border: 1px solid;
-        padding: 7px;
-        font-family: $settings-font;
-        color: white;
-        @include border-radius(4px, 4px, 4px, 4px);
-        @include button-hover;
+        @include link-button;
       }
     }
     .settings__border {
@@ -166,6 +174,50 @@ $break-large: 1200px;
     50% {
       height: 28px;
       width: 28px;
+    }
+  }
+
+  /* RESULT -- RESULT -- RESULT -- RESULT -- RESULT -- RESULT -- RESULT */
+
+  .result {
+    @include block;
+
+    .result__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .result__container:nth-child(1) {
+      box-shadow: 0 6px 3px -4px $main-red;
+      margin-bottom: 20px;
+    }
+
+    .result__header {
+      font-family: $main-font;
+      font-size: 38px;
+      margin: 10px 0;
+      color: $main-red;
+
+      .result__settings,
+      .result__score {
+        color: silver;
+        margin-left: 14px;
+      }
+    }
+
+    .result__header--main {
+      font-size: 48px;
+    }
+
+    .result__button {
+      @include link-button;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $break-large) {
+      width: 20%;
     }
   }
 }

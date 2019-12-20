@@ -1,5 +1,5 @@
 import React from "react";
-import { getTargets } from "./getTargets";
+import { getTargets } from "../helpers/getTargets";
 import Target from "./Target";
 
 const ShowTargets = ({
