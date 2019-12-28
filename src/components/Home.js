@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "./Header";
-import "./styles.scss";
+import StartGame from "./StartGame";
 
 class Home extends React.Component {
   state = {
@@ -23,7 +22,6 @@ class Home extends React.Component {
 
   render() {
     const { gameDuration, gameDifficult } = this.state;
-
     return (
       <main className="page">
         <Header />
@@ -86,20 +84,10 @@ class Home extends React.Component {
               Hard
             </button>
           </div>
-          <span className="settings__border"></span>
-          {(gameDuration != null) & (gameDifficult != null) ? (
-            <div className="settings__container">
-              <Link
-                className="settings__buton"
-                to={{
-                  pathname: "/game",
-                  state: { gameDuration, gameDifficult }
-                }}
-              >
-                Start game
-              </Link>
-            </div>
-          ) : null}
+          <StartGame
+            gameDifficult={gameDifficult}
+            gameDuration={gameDuration}
+          />
         </section>
       </main>
     );

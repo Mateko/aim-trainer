@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.scss";
 import Delay from "./Delay";
 
 class Target extends React.Component {

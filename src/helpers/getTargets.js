@@ -27,8 +27,8 @@ export const getTargets = (width, height, gameDifficult, gameDuration) => {
   console.log(width, height);
 
   const randomTargetPositions = initialArray.map(() => [
-    randomNumber(width - 28),
-    randomNumber(height - 28)
+    randomNumber(width - 34),
+    randomNumber(height - 34)
   ]);
 
   let targetRespawnTime;

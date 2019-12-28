@@ -1,9 +1,15 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import ShowTargets from "./ShowTargets";
+import Counter from "./Counter";
 
 class Game extends React.Component {
-  state = { width: 0, height: 0, score: 0, goToScoreBoard: false };
+  state = {
+    width: 0,
+    height: 0,
+    score: 0,
+    goToScoreBoard: false
+  };
 
   constructor(props) {
     super(props);
@@ -14,19 +20,19 @@ class Game extends React.Component {
 
   componentDidMount() {
     if (this.gameBoard.current) {
+      const width = this.gameBoard.current.offsetWidth;
+      const height = this.gameBoard.current.offsetHeight;
+      this.checkTime();
+
       this.setState({
-        width: this.gameBoard.current.offsetWidth,
-        height: this.gameBoard.current.offsetHeight
+        width,
+        height
       });
     }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (this.state.score === nextState.score) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.state.score === nextState.score;
   }
 
   countScore = () => {
@@ -70,13 +76,15 @@ class Game extends React.Component {
       );
     }
 
-    this.checkTime();
-
     return (
       <main className="page" ref={this.gameBoard}>
-        {this.showTargets(width, height, gameDuration, gameDifficult)}
+        <section className="game">
+          {this.showTargets(width, height, gameDuration, gameDifficult)}
+          <Counter gameDuration={gameDuration} />
+        </section>
       </main>
     );
   }
 }
+
 export default Game;
