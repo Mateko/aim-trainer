@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8d1b623ddc43600a5125eca0faa1b0ce",
+    "revision": "b3a55eab4750fcd6175d189077b31ab6",
     "url": "/aim-trainer/index.html"
   },
   {
-    "revision": "a9d64d3ffd3bc0d07030",
-    "url": "/aim-trainer/static/css/main.4420fcda.chunk.css"
+    "revision": "ea36963aa03c28af261b",
+    "url": "/aim-trainer/static/css/main.1cdbd610.chunk.css"
   },
   {
     "revision": "1c932fd5ea9eaad41a07",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aim-trainer/static/js/2.afdc8b42.chunk.js.LICENSE"
   },
   {
-    "revision": "a9d64d3ffd3bc0d07030",
+    "revision": "ea36963aa03c28af261b",
     "url": "/aim-trainer/static/js/main.72994777.chunk.js"
   },
   {
